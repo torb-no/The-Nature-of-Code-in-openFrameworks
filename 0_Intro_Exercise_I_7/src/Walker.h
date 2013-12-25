@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "ofMain.h"
+#include <ctime>
 
 class Walker {
     

@@ -13,6 +13,8 @@ Walker::Walker()
     nextPoint.x = ofGetWidth() / 2;
     nextPoint.y = ofGetHeight() / 2;
     
+    // Seed random to mamke things less deterministic
+    srand(time(NULL));
     xOffset = ofRandom(0, 100000);
     yOffset = ofRandom(0, 100000);
     
