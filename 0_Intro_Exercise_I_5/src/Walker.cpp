@@ -20,7 +20,7 @@ void Walker::step()
     prevPoint.y = nextPoint.y;
     
     float r = ofRandom(1);
-    float length = ofRandom(1) * 10;
+    float length = generator.getNormal(20, 2);
     
     if (r < 0.25) {
         nextPoint.x += length;
