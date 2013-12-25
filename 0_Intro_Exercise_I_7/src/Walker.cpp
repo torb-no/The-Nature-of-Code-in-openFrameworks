@@ -17,9 +17,6 @@ Walker::Walker()
     srand(time(NULL));
     xOffset = ofRandom(0, 100000);
     yOffset = ofRandom(0, 100000);
-    
-    cout << "xOffset:" << xOffset << endl;
-    cout << "yOffset:" << yOffset << endl;
 }
 
 void Walker::step()
