@@ -5,7 +5,6 @@ void testApp::setup(){
     ofSetFrameRate(60);
     ofSetBackgroundAuto(false);
     ofSetColor(0, 0, 0);
-    ofRect(20, 20, 20, 20);
 }
 
 //--------------------------------------------------------------
