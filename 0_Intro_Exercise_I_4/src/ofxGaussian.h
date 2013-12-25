@@ -16,6 +16,7 @@ class ofxGuassian {
     
 public:
     float nextGaussian();
+    float getNormal(float standard, float mean);
     
 private:
     bool haveNextNextGaussian = false;

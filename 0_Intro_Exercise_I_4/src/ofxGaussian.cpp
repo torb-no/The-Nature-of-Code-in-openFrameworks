@@ -27,3 +27,10 @@ float ofxGuassian::nextGaussian() {
         return v1 * multiplier;
     }
 }
+
+
+float ofxGuassian::getNormal(float standard, float mean) {
+    float num = nextGaussian();
+    return standard * num + mean;
+}
+

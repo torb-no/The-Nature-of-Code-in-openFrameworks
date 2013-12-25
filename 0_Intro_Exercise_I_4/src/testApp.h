@@ -25,7 +25,5 @@ class testApp : public ofBaseApp{
     
         ofxGuassian generator;
     
-        float getNormal(float standard, float mean);
-    
         ofColor color;
 };
