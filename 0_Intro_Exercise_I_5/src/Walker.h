@@ -11,17 +11,22 @@
 
 #include <iostream>
 #include "ofMain.h"
+#include "ofxGaussian.h"
 
 class Walker {
     
 public:
     Walker();
     
+    void step();
+    void draw();
+    
+private:
     ofPoint prevPoint;
     ofPoint nextPoint;
     
-    void step();
-    void draw();
+    ofxGuassian generator;
+    
 };
 
 #endif /* defined(____Intro_Exercise_I_5__Walker__) */
