@@ -12,8 +12,6 @@ Walker::Walker()
 {
     nextPoint.x = ofGetWidth() / 2;
     nextPoint.y = ofGetHeight() / 2;
-//    nextPoint.x = prevPoint.x;
-//    nextPoint.y = prevPoint.y;
 }
 
 void Walker::step()
@@ -22,7 +20,7 @@ void Walker::step()
     prevPoint.y = nextPoint.y;
     
     float r = ofRandom(1);
-    float length = 6;
+    float length = ofRandom(1) * 10;
     
     if (r < 0.25) {
         nextPoint.x += length;
