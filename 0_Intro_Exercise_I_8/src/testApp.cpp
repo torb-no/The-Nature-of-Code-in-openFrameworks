@@ -81,9 +81,6 @@ void testApp::mouseReleased(int x, int y, int button){
     float xIncrement = (float)mouseX / (float)ofGetWidth();
     float yIncrement = (float)mouseY / (float)ofGetHeight();
     generateMap(xIncrement/10, yIncrement/10);
-    
-    cout << "x " << xIncrement << endl;
-    cout << "y " << yIncrement << endl;
 }
 
 //--------------------------------------------------------------
