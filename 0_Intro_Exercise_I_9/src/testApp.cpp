@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void testApp::setup() {
-    ofSetFrameRate(30);
+    ofSetFrameRate(15);
     pixelBuffer.allocate(ofGetWidth(), ofGetHeight(), OF_IMAGE_GRAYSCALE);
     ofSetColor(255);
 }
@@ -14,10 +14,10 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-    float xoff;
+    float xoff = 0.0;
     
     for (int x = 0; x < ofGetWidth(); x++) {
-        float yoff;
+        float yoff = 0.0;
         
         for (int y = 0; y < ofGetHeight(); y++) {
             float bright = ofMap(ofNoise(xoff, yoff, noiseTime), inputMin, inputMax, 0, 255);
