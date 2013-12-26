@@ -1,6 +1,6 @@
 The-Nature-of-Code-in-openFrameworks
 ====================================
 
-Daniel Shiffman’s Nature of Code Exercises done in openFrameworks.
+My attempt at doing the exercises from [Nature of Code](http://natureofcode.com).
 
-Made with  version 0.8.0 of openFrameworks on OS X.
+Made with version 0.8.0 of [openFrameworks](http://www.openframeworks.cc) on OS X.
