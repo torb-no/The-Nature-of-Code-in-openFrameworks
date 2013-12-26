@@ -19,11 +19,10 @@ void testApp::draw(){
 }
 
 void testApp::generateMap(float xIncrement, float yIncrement) {
-    float xoff;
-
+    float xoff = 0.0;
     
     for (int x = 0; x < ofGetWidth(); x++) {
-        float yoff;
+        float yoff = 0.0;
         
         for (int y = 0; y < ofGetHeight(); y++) {
             float bright = ofMap(ofNoise(xoff, yoff), inputMin, inputMax, 0, 255);
