@@ -22,7 +22,7 @@ void testApp::draw(){
     // Wait Õtil third frame before drawing (once). Previous frames are cleared by OFÉ
     if (frameCount == 3) {
         pos.x = ofGetWidth() / 2;
-        pos.y = ofGetHeight() / 2;
+        pos.y = ofGetHeight() / 2 + ofGetHeight() / 8;
         spiralingCircles();
     }
     frameCount++;
