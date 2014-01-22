@@ -17,6 +17,8 @@ Mover::Mover() {
     
     acceleration.x = 0;
     acceleration.y = 0;
+    
+    highest = 0;
 }
 
 void Mover::update() {
@@ -25,7 +27,21 @@ void Mover::update() {
     mouse.y = parent->mouseY;
     ofVec2f direction = mouse - location;
     direction.normalize();
-    direction *= 0.25;
+    
+    float distance = mouse.distance(location);
+    if (distance < 350) {
+        float closePart = 350 - distance;
+        float closeMulti = closePart/350;
+        closeMulti *= 0.75;
+        distance *= closeMulti;
+        
+    }
+    else {
+        distance *= 0.05;
+    }
+    
+    
+    //direction *= 0.25;
     acceleration = direction;
     
     velocity = velocity + acceleration;

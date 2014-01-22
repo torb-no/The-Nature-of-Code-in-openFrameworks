@@ -24,6 +24,8 @@ public:
     ofVec2f acceleration;
     
     ofBaseApp* parent;
+    
+    float highest;
 };
 
 #endif /* defined(____Vectors_Exercise_1_8__Mover__) */
