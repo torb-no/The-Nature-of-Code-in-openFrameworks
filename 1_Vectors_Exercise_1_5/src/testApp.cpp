@@ -17,7 +17,7 @@ void testApp::draw(){
 }
 
 //--------------------------------------------------------------
-void testApp::keyPressed(int key){
+void testApp::keyPressed(int key) {
     if (key == OF_KEY_UP) {
         rightMover.acceleration.x = .33;
     }
@@ -27,7 +27,7 @@ void testApp::keyPressed(int key){
 }
 
 //--------------------------------------------------------------
-void testApp::keyReleased(int key){
+void testApp::keyReleased(int key) {
     rightMover.acceleration.x = 0;
 }
 
