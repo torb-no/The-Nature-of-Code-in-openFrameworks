@@ -42,7 +42,6 @@ void Balloon::update() {
     // Check edges
     if (location.x > ofGetWidth()-radius) {
         velocity.x = -abs(velocity.x * 0.85);
-        
     }
     else if (location.x < radius) {
         velocity.x = abs(velocity.x * 0.85);
