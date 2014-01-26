@@ -30,7 +30,8 @@ private:
     ofVec2f wind;
     ofVec2f updrift;
     
-    float windNoiseOffset;
+    float windNoiseOffsetX;
+    float windNoiseOffsetY;
     
 };
 

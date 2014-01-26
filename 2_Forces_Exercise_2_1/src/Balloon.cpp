@@ -24,12 +24,15 @@ Balloon::Balloon() {
     updrift.y = -0.002;
     
     srand(time(NULL));
-    windNoiseOffset = ofRandom(0, 10000);
+    windNoiseOffsetX = ofRandom(0, 10000);
+    windNoiseOffsetY = ofRandom(0, 10000);
 }
 
 void Balloon::update() {
-    windNoiseOffset += 0.01;
-    wind.x = ofMap(ofNoise(windNoiseOffset), 0, 1, -0.15, 0.15);
+    windNoiseOffsetX += 0.01;
+    windNoiseOffsetY += 0.01;
+    wind.x = ofMap(ofNoise(windNoiseOffsetX), 0, 1, -0.15, 0.15);
+    wind.y = ofMap(ofNoise(windNoiseOffsetY), 0, 1, -0.007, 0.003);
     
     // Reset acceleration
     acceleration.x = 0;
@@ -40,13 +43,18 @@ void Balloon::update() {
     acceleration += updrift;
     
     // Check edges
-    if (location.x > ofGetWidth()-radius ||
-        location.x < radius) {
-        velocity.x *= -0.85;
+    if (location.x > ofGetWidth()-radius) {
+        velocity.x = -abs(velocity.x * 0.85);
+        
     }
-    if (location.y > ofGetHeight()-radius ||
-        location.y < radius) {
-        velocity.y *= -0.85;
+    else if (location.x < radius) {
+        velocity.x = abs(velocity.x * 0.85);
+    }
+    if (location.y > ofGetHeight()-radius) {
+        velocity.y = -abs(velocity.y * 0.85);
+    }
+    else if (location.y < radius) {
+        velocity.y = abs(velocity.y * 0.85);
     }
     
     // Calculate velocity and location
