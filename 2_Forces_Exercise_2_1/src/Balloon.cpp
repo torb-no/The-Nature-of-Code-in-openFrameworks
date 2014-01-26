@@ -22,9 +22,15 @@ Balloon::Balloon() {
     
     updrift.x = 0;
     updrift.y = -0.002;
+    
+    srand(time(NULL));
+    windNoiseOffset = ofRandom(0, 10000);
 }
 
 void Balloon::update() {
+    windNoiseOffset += 0.01;
+    wind.x = ofMap(ofNoise(windNoiseOffset), 0, 1, -0.15, 0.15);
+    
     // Reset acceleration
     acceleration.x = 0;
     acceleration.y = 0;

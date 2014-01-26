@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "ofMain.h"
+#include <ctime>
 
 class Balloon {
     
@@ -28,6 +29,8 @@ private:
     
     ofVec2f wind;
     ofVec2f updrift;
+    
+    float windNoiseOffset;
     
 };
 
