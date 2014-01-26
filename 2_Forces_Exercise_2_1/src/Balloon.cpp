@@ -17,9 +17,6 @@ Balloon::Balloon() {
     velocity.x = 0;
     velocity.y = 0;
     
-    wind.x = 0.01;
-    wind.y = 0;
-    
     updrift.x = 0;
     updrift.y = -0.002;
     
