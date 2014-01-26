@@ -36,11 +36,11 @@ void Balloon::update() {
     // Check edges
     if (location.x > ofGetWidth()-radius ||
         location.x < radius) {
-        velocity.x *= -1;
+        velocity.x *= -0.85;
     }
     if (location.y > ofGetHeight()-radius ||
         location.y < radius) {
-        velocity.y *= -1;
+        velocity.y *= -0.85;
     }
     
     // Calculate velocity and location
