@@ -26,6 +26,7 @@ public:
     float mass;
     float getRadius();
     
+    ofColor color;
 };
 
 #endif /* defined(____Forces_Exercise_2_3__Mover__) */

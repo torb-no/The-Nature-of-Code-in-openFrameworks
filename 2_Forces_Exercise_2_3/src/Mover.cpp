@@ -17,6 +17,8 @@ Mover::Mover() {
     
     velocity.x = 0;
     velocity.y = 0;
+    
+    color.set(ofRandom(255), ofRandom(255), ofRandom(255));
 }
 
 void Mover::update() {
@@ -26,6 +28,7 @@ void Mover::update() {
 }
 
 void Mover::draw() {
+    ofSetColor(color, 200);
     ofCircle(location, getRadius());
 }
 
