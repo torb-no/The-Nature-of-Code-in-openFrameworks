@@ -3,7 +3,7 @@
 #include "ofMain.h"
 #include "Mover.h"
 
-#define NBALLS 10
+#define NBALLS 15
 
 class testApp : public ofBaseApp{
 
