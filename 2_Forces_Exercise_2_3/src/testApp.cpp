@@ -10,37 +10,42 @@ void testApp::setup(){
     gravity.x = 0;
     gravity.y = 0.1;
     
-    edgeForceSize = 150;
+    edgeForceSize = 100;
+    edgeForceMultiplier = 1.5;
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-    mover.applyForce(wind);
-    mover.applyForce(gravity);
-    
-    edgeForce *= 0;
-    if (mover.location.y + edgeForceSize > ofGetHeight()) {
-        edgeForce.y = -(mover.location.y / ofGetHeight());
+    for (int i = 0; i < NBALLS; i++) {
+        movers[i].applyForce(wind);
+        movers[i].applyForce(gravity);
+        
+        edgeForce *= 0;
+        if (movers[i].location.y + edgeForceSize > ofGetHeight()) {
+            edgeForce.y = (movers[i].location.y / ofGetHeight()) * -edgeForceMultiplier;
+        }
+        else if (movers[i].location.y - edgeForceSize < 0) {
+            edgeForce.y = (movers[i].location.y / ofGetHeight()) * edgeForceMultiplier;
+        }
+        
+        if (movers[i].location.x + edgeForceSize > ofGetWidth()) {
+            edgeForce.x = (movers[i].location.x / ofGetWidth()) * -edgeForceMultiplier;
+        }
+        else if (movers[i].location.x - edgeForceSize < 0) {
+            edgeForce.x = (movers[i].location.x / ofGetWidth()) * edgeForceMultiplier;
+        }
+        
+        movers[i].applyForce(edgeForce);
+        
+        movers[i].update();
     }
-    else if (mover.location.y - edgeForceSize < 0) {
-        edgeForce.y = mover.location.y / ofGetHeight();
-    }
-    
-    if (mover.location.x + edgeForceSize > ofGetWidth()) {
-        edgeForce.x = -(mover.location.x / ofGetWidth());
-    }
-    else if (mover.location.x - edgeForceSize < 0) {
-        edgeForce.x = mover.location.x / ofGetWidth();
-    }
-    
-    mover.applyForce(edgeForce);
-    
-    mover.update();
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-    mover.draw();
+    for (int i = 0; i < NBALLS; i++) {
+        movers[i].draw();
+    }
 }
 
 //--------------------------------------------------------------

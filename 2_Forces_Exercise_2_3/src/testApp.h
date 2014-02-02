@@ -3,6 +3,8 @@
 #include "ofMain.h"
 #include "Mover.h"
 
+#define NBALLS 10
+
 class testApp : public ofBaseApp{
 
 	public:
@@ -20,9 +22,10 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
-    Mover mover;
+    Mover movers[NBALLS];
     ofVec2f wind;
     ofVec2f gravity;
     ofVec2f edgeForce;
     float edgeForceSize;
+    float edgeForceMultiplier;
 };
