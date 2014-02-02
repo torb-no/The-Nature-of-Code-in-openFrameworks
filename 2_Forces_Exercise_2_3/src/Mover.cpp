@@ -10,7 +10,7 @@
 
 Mover::Mover() {
     
-    mass = ofRandom(1, 5);
+    mass = ofRandom(1, 8);
     
     location.x = ofGetWidth() / 3;
     location.y = ofGetHeight() / 3;
