@@ -2,4 +2,4 @@
 
 Random walker tends to right bottom
 
-![Screenshot](screenshot.png)
+![Screenshot](image.png)
