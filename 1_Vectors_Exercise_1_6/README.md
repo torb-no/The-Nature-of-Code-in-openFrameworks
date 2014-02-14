@@ -1,8 +1,8 @@
-# Vectors - Exercise 1.5
+# Vectors - Exercise 1.6
 
-> Create a simulation of a car (or runner) that accelerates when you press the up key and brakes when you press the down key.
+> Referring back to the Introduction, implement acceleration according to Perlin noise.
 
-[Link](http://natureofcode.com/book/chapter-1-vectors/#chapter01_exercise5)
+[Link](http://natureofcode.com/book/chapter-1-vectors/#chapter01_exercise6)
 
 ![Screenshot](image1.png)
 ![Screenshot](image2.png)
