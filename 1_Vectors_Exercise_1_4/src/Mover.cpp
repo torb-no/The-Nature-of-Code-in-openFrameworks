@@ -48,6 +48,7 @@ void Mover::checkEdges() {
     }
 }
 
+// Exercise answer:
 void Mover::limit(ofVec2f &vector, float max) {
     if (vector.length() > max) {
         vector.normalize();
