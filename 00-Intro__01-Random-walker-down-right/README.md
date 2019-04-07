@@ -4,4 +4,4 @@
 
 [Link](http://natureofcode.com/book/introduction/#intro_exercise1)
 
-![Screenshot](image.png)
+![Screenshot](preview.png)
